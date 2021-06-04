@@ -47,7 +47,7 @@ function getRandomQuote () {
 }
 
 /*** 
- * Generate a random color
+ * Generate a random color and change the page background to that color.
  ***/
 
 function randomColor () {
