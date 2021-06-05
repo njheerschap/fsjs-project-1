@@ -33,7 +33,7 @@ const quotes = [
     tag: "Politics"
   }
 
-]
+];
 
 
 /***
@@ -77,20 +77,19 @@ function printQuote () {
   if (typeof newQuoteObject.year === "string" || typeof newQuoteObject.year === "number") {
     newQuote += `<span class="year">${newQuoteObject.year}</span>`    
   }
-  newQuote += `</p>`;
   if (typeof newQuoteObject.tag === "string") {
-    newQuote += `<p class="tag">${newQuoteObject.tag}</p>`
+    newQuote += `<span class="tag"> - ${newQuoteObject.tag}</span>`
   }
+  newQuote += `</p>`;
   quoteBox.innerHTML = newQuote;
-  randomColor();
-    
+  randomColor();    
 }
 
 /*** 
  * Timer to change the quote every ten seconds
  ***/
 
-setInterval(() => { printQuote() }, 10000)
+setInterval(() => { printQuote() }, 10000);
 
 
 
