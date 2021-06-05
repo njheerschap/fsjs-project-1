@@ -71,13 +71,13 @@ function printQuote () {
   <p class="quote">${newQuoteObject.quote}</p>
   <p class="source">${newQuoteObject.source}
   `;
-  if (typeof newQuoteObject.citation === "string") {
+  if (newQuoteObject.citation) {
     newQuote += `<span class="citation">${newQuoteObject.citation}</span>`
   }
-  if (typeof newQuoteObject.year === "string" || typeof newQuoteObject.year === "number") {
+  if (newQuoteObject.year || newQuoteObject.year) {
     newQuote += `<span class="year">${newQuoteObject.year}</span>`    
   }
-  if (typeof newQuoteObject.tag === "string") {
+  if (newQuoteObject.tag) {
     newQuote += `<span class="tag"> - ${newQuoteObject.tag}</span>`
   }
   newQuote += `</p>`;
